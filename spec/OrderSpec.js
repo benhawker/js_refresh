@@ -13,8 +13,11 @@ describe("Order", function() {
 
   it("adds an item to the order", function() {
     shoe = new Product("shoe", 1);
-    order.add_product(shoe, 1)
+    order.add_product(shoe, 2)
 
-    expect(order.products).toEqual("some map")
+    expect(Object.keys(order.products).length).toEqual(1)
+
+    expect(Object.keys(order.products)).toEqual(["shoe"])
+    expect(order.products["shoe"]).toEqual(2)
   });
 });

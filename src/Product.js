@@ -17,3 +17,4 @@ class Product {
     this.instock = true;
   }
 }
+
